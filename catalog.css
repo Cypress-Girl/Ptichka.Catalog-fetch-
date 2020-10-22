@@ -34,6 +34,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 #category-container #category-wrapper #categories .category-box img {
   width: 120px;
@@ -103,7 +104,7 @@
 }
 #central-block .products-wrapper #caption-container #about-container #counter {
   color: #734B3F;
-  font-family: OpenSans;
+  font-family: OpenSans-Regular;
   font-size: 13px;
   line-height: 24px;
   width: 360px;
@@ -125,11 +126,18 @@
   box-shadow: 0 0 2px 0 rgba(115, 75, 63, 0.3);
   padding-top: 8px;
   box-sizing: border-box;
+  cursor: pointer;
   color: #734B3F;
   font-family: OpenSans;
+  font-weight: bold;
   font-size: 13px;
   line-height: 24px;
   text-align: center;
+}
+#central-block .products-wrapper #products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #central-block .products-wrapper #products-container .one-product-container {
   width: 360px;
@@ -140,12 +148,17 @@
   align-items: center;
   border-radius: 30px;
   background-color: white;
-  margin-right: 24px;
+  margin: 0 12px 24px 12px;
 }
 #central-block .products-wrapper #products-container .one-product-container .image-wrap {
   width: 300px;
   height: 192px;
   padding: 24px 0;
+  margin: 0 auto;
+}
+#central-block .products-wrapper #products-container .one-product-container .image-wrap img {
+  width: 100%;
+  height: auto;
 }
 #central-block .products-wrapper #products-container .one-product-container .product-name {
   color: #734B3F;
@@ -164,12 +177,13 @@
   text-align: center;
 }
 #central-block .products-wrapper #products-container .one-product-container .button-add {
+  display: block;
   width: 216px;
   height: 64px;
   border-radius: 100px;
   background-color: #F7BD13;
   border: none;
-  margin: 24px 0 56px;
+  margin: 24px auto;
   color: #734B3F;
   font-family: OpenSans-Regular;
   font-size: 14px;
@@ -178,6 +192,7 @@
 }
 #central-block .products-wrapper #products-container .one-product-container .button-add:hover {
   box-shadow: 0 16px 30px 0 #F5A623;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=catalog.css.map */
