@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Все",
+      "image": "./Produce_icons/all.png"
+    },
+    {
+      "id": 1,
+      "name": "Курица",
+      "image": "./Produce_icons/chicken.png"
+    },
+    {
+      "id": 2,
+      "name": "Индейка",
+      "image": "./Produce_icons/turkey.png"
+    },
+    {
+      "id": 3,
+      "name": "Кролик",
+      "image": "./Produce_icons/rabbit.png"
+    },
+    {
+      "id": 4,
+      "name": "Копчёности и колбасы",
+      "image": "./Produce_icons/sausage.png"
+    },
+    {
+      "id": 5,
+      "name": "Яйца",
+      "image": "./Produce_icons/egg.png"
+    },
+    {
+      "id": 6,
+      "name": "Полуфабрикаты",
+      "image": "./Produce_icons/semiproduct.png"
+    }
+  ],
+  "data": [
+    {
+      "id": 0,
+      "category_id": 1,
+      "name": "Филе индейки",
+      "image": "",
+      "price": 200,
+      "description": "750гр"
+    },
+    {
+      "id": 1,
+      "category_id": 1,
+      "name": "Филе курицы",
+      "image": "",
+      "price": 200,
+      "description": "750гр"
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "name": "Яйца кур",
+      "image": "",
+      "price": 100,
+      "description": "10шт"
+    },
+    {
+      "id": 3,
+      "category_id": 1,
+      "name": "Филе индейки",
+      "image": "",
+      "price": 200,
+      "description": "750гр"
+    },
+    {
+      "id": 4,
+      "category_id": 1,
+      "name": "Филе курицы",
+      "image": "",
+      "price": 200,
+      "description": "750гр"
+    },
+    {
+      "id": 5,
+      "category_id": 1,
+      "name": "Яйца кур",
+      "image": "",
+      "price": 100,
+      "description": "10шт"
+    }
+  ]
+}

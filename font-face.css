@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "FiraSans-Black";
+    src: url("./fonts/FiraSans-Black.woff") format("woff"),
+    url("./fonts/FiraSans-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "FiraSans-Light";
+    src: url("./fonts/FiraSans-Light.woff") format("woff"),
+    url("./fonts/FiraSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "FiraSans-Regular";
+    src: url("./fonts/FiraSans-Regular.woff") format("woff"),
+    url("./fonts/FiraSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("./fonts/OpenSans-Regular.woff") format("woff"),
+    url("./fonts/FiraSans-Regular.woff2") format("woff2");
+}

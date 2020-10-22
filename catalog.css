@@ -1,0 +1,183 @@
+#category-container {
+  width: 100%;
+  height: 432px;
+  padding-top: 95px;
+  box-sizing: border-box;
+}
+#category-container #category-wrapper {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+#category-container #category-wrapper p {
+  color: #F7BD13;
+  font-family: FiraSans-Black;
+  font-size: 30px;
+  letter-spacing: -0.25px;
+  line-height: 48px;
+  width: 552px;
+  text-align: center;
+  margin: 0 auto;
+}
+#category-container #category-wrapper #categories {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 89px 0 24px;
+}
+#category-container #category-wrapper #categories .category-box {
+  width: 120px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#category-container #category-wrapper #categories .category-box img {
+  width: 120px;
+  height: 120px;
+}
+#category-container #category-wrapper #categories .category-box p {
+  width: 100%;
+  font-family: FiraSans-Black;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 16px;
+  white-space: pre-wrap;
+}
+#category-container #category-wrapper #categories .category-box .light-green {
+  color: #82BA26;
+}
+#category-container #category-wrapper #categories .category-box .orange-yellow {
+  color: #F5A623;
+}
+#category-container #category-wrapper #categories .category-box .light-purple {
+  color: #B18CB1;
+}
+#category-container #category-wrapper #categories .category-box .gray {
+  color: #A7A7A7;
+}
+#category-container #category-wrapper #categories .category-box .red {
+  color: #EA4D30;
+}
+#category-container #category-wrapper #categories .category-box .light-brown {
+  color: #C5B0A0;
+}
+
+#central-block {
+  width: 100%;
+  min-height: 600px;
+  height: auto;
+  background-color: #f5f5f5;
+  padding-bottom: 170px;
+}
+#central-block .products-wrapper {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+#central-block .products-wrapper #caption-container {
+  width: 100%;
+  height: 215px;
+  display: flex;
+  justify-content: space-between;
+}
+#central-block .products-wrapper #caption-container #about-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#central-block .products-wrapper #caption-container #about-container #caption {
+  color: #734B3F;
+  font-family: FiraSans-Black;
+  font-size: 24px;
+  letter-spacing: -0.2px;
+  width: 360px;
+  text-align: left;
+}
+#central-block .products-wrapper #caption-container #about-container #counter {
+  color: #734B3F;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 24px;
+  width: 360px;
+  text-align: left;
+}
+#central-block .products-wrapper #caption-container #products-pages {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#central-block .products-wrapper #caption-container #products-pages p {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 6px;
+  box-shadow: 0 0 2px 0 rgba(115, 75, 63, 0.3);
+  padding-top: 8px;
+  box-sizing: border-box;
+  color: #734B3F;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+#central-block .products-wrapper #products-container .one-product-container {
+  width: 360px;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 30px;
+  background-color: white;
+  margin-right: 24px;
+}
+#central-block .products-wrapper #products-container .one-product-container .image-wrap {
+  width: 300px;
+  height: 192px;
+  padding: 24px 0;
+}
+#central-block .products-wrapper #products-container .one-product-container .product-name {
+  color: #734B3F;
+  font-family: FiraSans;
+  font-size: 20px;
+  line-height: 24px;
+  width: 360px;
+  text-align: center;
+}
+#central-block .products-wrapper #products-container .one-product-container .product-price {
+  color: #F5A623;
+  font-family: FiraSans;
+  font-size: 16px;
+  line-height: 24px;
+  width: 360px;
+  text-align: center;
+}
+#central-block .products-wrapper #products-container .one-product-container .button-add {
+  width: 216px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #F7BD13;
+  border: none;
+  margin: 24px 0 56px;
+  color: #734B3F;
+  font-family: OpenSans-Regular;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+#central-block .products-wrapper #products-container .one-product-container .button-add:hover {
+  box-shadow: 0 16px 30px 0 #F5A623;
+}
+
+/*# sourceMappingURL=catalog.css.map */
