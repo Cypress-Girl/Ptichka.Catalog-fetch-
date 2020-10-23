@@ -1,6 +1,39 @@
+#bottom-counter #wrapper .products-pages, #central-block .products-wrapper #caption-container .products-pages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#bottom-counter #wrapper .products-pages .page-box, #central-block .products-wrapper #caption-container .products-pages .page-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 6px;
+  box-shadow: 0 0 2px 0 rgba(115, 75, 63, 0.3);
+  padding-top: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #734B3F;
+  font-family: OpenSans-Regular;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+#bottom-counter #wrapper .products-pages .page-box:hover, #central-block .products-wrapper #caption-container .products-pages .page-box:hover {
+  box-shadow: 0 0 4px 0 #A7A7A7;
+}
+#bottom-counter #wrapper .products-pages .current, #central-block .products-wrapper #caption-container .products-pages .current {
+  font-size: 15px;
+  color: #EA4D30;
+}
+
 #category-container {
   width: 100%;
-  height: 432px;
+  height: auto;
+  min-height: 432px;
   padding-top: 95px;
   box-sizing: border-box;
 }
@@ -15,7 +48,6 @@
   font-size: 30px;
   letter-spacing: -0.25px;
   line-height: 48px;
-  width: 552px;
   text-align: center;
   margin: 0 auto;
 }
@@ -23,7 +55,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   margin: 89px 0 24px;
 }
@@ -35,6 +68,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  margin: 15px 10px;
 }
 #category-container #category-wrapper #categories .category-box img {
   width: 120px;
@@ -73,7 +107,7 @@
   min-height: 600px;
   height: auto;
   background-color: #f5f5f5;
-  padding-bottom: 170px;
+  padding-bottom: 50px;
 }
 #central-block .products-wrapper {
   max-width: 1200px;
@@ -87,19 +121,19 @@
   justify-content: space-between;
 }
 #central-block .products-wrapper #caption-container #about-container {
-  width: 50%;
+  width: max-content;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 0 24px;
 }
 #central-block .products-wrapper #caption-container #about-container #caption {
   color: #734B3F;
   font-family: FiraSans-Black;
   font-size: 24px;
   letter-spacing: -0.2px;
-  width: 360px;
   text-align: left;
 }
 #central-block .products-wrapper #caption-container #about-container #counter {
@@ -107,37 +141,13 @@
   font-family: OpenSans-Regular;
   font-size: 13px;
   line-height: 24px;
-  width: 360px;
+  white-space: nowrap;
   text-align: left;
-}
-#central-block .products-wrapper #caption-container #products-pages {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#central-block .products-wrapper #caption-container #products-pages p {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: white;
-  margin-right: 6px;
-  box-shadow: 0 0 2px 0 rgba(115, 75, 63, 0.3);
-  padding-top: 8px;
-  box-sizing: border-box;
-  cursor: pointer;
-  color: #734B3F;
-  font-family: OpenSans;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 24px;
-  text-align: center;
 }
 #central-block .products-wrapper #products-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 #central-block .products-wrapper #products-container .one-product-container {
   width: 360px;
@@ -165,7 +175,6 @@
   font-family: FiraSans;
   font-size: 20px;
   line-height: 24px;
-  width: 360px;
   text-align: center;
 }
 #central-block .products-wrapper #products-container .one-product-container .product-price {
@@ -173,7 +182,6 @@
   font-family: FiraSans;
   font-size: 16px;
   line-height: 24px;
-  width: 360px;
   text-align: center;
 }
 #central-block .products-wrapper #products-container .one-product-container .button-add {
@@ -193,6 +201,20 @@
 #central-block .products-wrapper #products-container .one-product-container .button-add:hover {
   box-shadow: 0 16px 30px 0 #F5A623;
   cursor: pointer;
+}
+
+#bottom-counter {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
+#bottom-counter #wrapper {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+#bottom-counter #wrapper .products-pages {
+  width: 100%;
 }
 
 /*# sourceMappingURL=catalog.css.map */

@@ -15,9 +15,10 @@
 //         console.error(err)
 //     })
 
+
 let data_json;
 
-    fetch('./data.json', {})
+fetch('./data.json', {})
     .then(response => {
         if (response.status === 200) {
             console.log(response.status)
@@ -33,26 +34,19 @@ let data_json;
         console.error(err)
     })
 
-function getTemplate(classElem){
-    let template = document.getElementsByClassName(classElem)[0];
-    if (template){
-        console.log(template.className);
-        console.log(template.children)
-    }
-
+function getTemplate(idElem) {
+    let template = document.getElementById(idElem);
     return template;
 }
 
 function initProductElement(item, template, parent) {
     let node = template.cloneNode(true);
-    let image = node.getElementsByTagName("img")[0];
-    let pName = node.getElementsByClassName("product-name")[0];
-    let pPrice = node.getElementsByClassName("product-price")[0];
 
     node.id = item.id;
-    image.src = item.image;
-    pName.innerText = item.name;
-    pPrice.innerText = `${item.description} / ${item.price} Р`;
+
+    node.children[0].firstElementChild.src = item.image;
+    node.children[1].innerText = item.name;
+    node.children[2].innerText = `${item.description} / ${item.price} Р`;
 
     node.style.display = "block";
     parent.append(node);
@@ -62,27 +56,25 @@ function initCategoryElement(item, template, parent) {
     let classColor = ["light-green", "yellow", "light-purple", "gray", "red", "yellow", "light-brown"];
 
     let node = template.cloneNode(true);
-    let image = node.getElementsByTagName("img")[0];
-    let p = node.getElementsByTagName("p")[0];
-
     node.id = "category_" + item.id;
-    image.src = item.image;
-    image.alt = item.name;
-    p.innerText = item.name;
-    p.classList.add(classColor[item.id]);
+
+    node.children[0].src = item.image;
+    node.children[0].alt = item.name;
+
+    node.children[1].innerText = item.name;
+    node.children[1].classList.add(classColor[item.id]);
+
 
     node.style.display = "block";
     parent.append(node);
 }
 
-function initSelectedCategory(elem, category_id){
-        elem.innerText = data_json.categories.
-            find(item => item.id == category_id).
-            name;
+function initSelectedCategory(elem, category_id) {
+    elem.innerText = data_json.categories.find(item => item.id == category_id).name;
 }
 
-function initFromTo(elem, from, to, total){
-        elem.innerText = `${from}-${to} из ${total}`;
+function initFromTo(elem, from, to, total) {
+    elem.innerText = `${from}-${to} из ${total}`;
 }
 
 function addCounter(template, parent, text) {
@@ -90,12 +82,21 @@ function addCounter(template, parent, text) {
     node = template.cloneNode(true);
     node.innerText = text;
     node.style.display = "block";
+
+    // if (Number.isInteger(text))
+    node.id = "page" + text;
+
+    if (node.classList.contains('current'))
+        node.classList.remove("current");
+    if (text == data_json.current_page)
+        node.classList.add('current');
+
     parent.append(node);
 }
 
 function initPageCounters(template, count, parent) {
 
-        let count1 = count > 7 ? 5 : count;
+    let count1 = count > 7 ? 5 : count;
 
     for (let i = 1; i <= count1; i++) {
         addCounter(template, parent, i);
@@ -105,8 +106,7 @@ function initPageCounters(template, count, parent) {
         addCounter(template, parent, "...");
         addCounter(template, parent, count);
     }
-    addCounter(template, parent, ">")
-
+    addCounter(template, parent, ">");
 }
 
 function allResponseDOM() {
@@ -115,51 +115,34 @@ function allResponseDOM() {
 
     template = getTemplate("category-box");
     parent = template.parentNode;
-    if (parent){
+    if (parent) {
         data_json.categories.forEach(item => initCategoryElement(item, template, parent));
     }
 
-    template = getTemplate("one-product-container");
+    template = getTemplate("one-product");
     parent = template.parentNode;
 
-    if (parent){
-        data_json.data.filter((item, index) => index < data_json.per_page).
-        forEach(item => initProductElement(item, template, parent));
+    if (parent) {
+        data_json.data.filter((item, index) => index < data_json.per_page).forEach(item => initProductElement(item, template, parent));
     }
 
-    initSelectedCategory(document.getElementById("caption"), 0);
+    template = getTemplate("caption");
+    initSelectedCategory(template, 0);
+    // initSelectedCategory(document.getElementById("caption"), 0);
 
+    template = getTemplate("counter");
     let total = (data_json.per_page <= data_json.total) ? data_json.per_page : data_json.total;
-    initFromTo(document.getElementById("counter"), 1, data_json.per_page, data_json.total);
+    initFromTo(template, 1, data_json.per_page, data_json.total);
+    // initFromTo(document.getElementById("counter"), 1, data_json.per_page, data_json.total);
 
+    template = getTemplate("page-box1");
+    parent = template.parentNode;
     let fullPage = Math.trunc(data_json.total / data_json.per_page);
     let countPage = (data_json.total % data_json.per_page == 0) ? fullPage : ++fullPage;
-    template = document.getElementsByClassName("page-box")[0];
+    initPageCounters(template, countPage, parent);
+
+    template = getTemplate("page-box2");
     parent = template.parentNode;
     initPageCounters(template, countPage, parent);
-}
 
-// function getRGB(img) {
-//     img = "./images/Catalog/Produce_icons/turkey.png";
-//
-//     let context = document.createElement('canvas').getContext('2d');
-//     if (typeof img == 'string') {
-//         let src = img;
-//         img = new Image;
-//         img.setAttribute('crossOrigin', '');
-//         img.src = src;
-//     }
-//
-//     context.imageSmoothingEnabled = true;
-//     context.drawImage(img, 0, 0, 120, 120);
-//
-//     let width = context.canvas.width;
-//     let y = context.canvas.height / 2;
-//     let color;
-//
-//     for(let x = 0; x < width; x++){
-//         color = context.getImageData(x, y, 1, 1).data.slice(0, 3);
-//         if (color[0] != 0 || color[1] != 0 || color[2] != 0)      break;
-//     }
-//     return color;
-// }
+}

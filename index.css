@@ -24,8 +24,9 @@ header .logo {
 header .menu-header {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   padding-left: calc(62%);
 }
 header .menu-header a {
@@ -63,7 +64,7 @@ footer {
 }
 
 .menu-footer {
-  padding-top: 46px;
+  padding-top: 25px;
   padding-bottom: 32px;
   padding-left: 24px;
   display: flex;
@@ -93,7 +94,7 @@ footer {
 .logo-footer {
   display: block;
   margin: 0 auto;
-  padding-top: 56px;
+  padding-top: 45px;
 }
 
 /*# sourceMappingURL=index.css.map */

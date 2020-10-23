@@ -5,6 +5,7 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./catalog.css">
+    <link rel="stylesheet" href="./media.css">
     <script type="module" src="./catalog.js"></script>
     <script type="module" src="./1.js"></script>
 
@@ -30,9 +31,8 @@
             <p>Продукция нашей фермы</p>
 
             <section id="categories">
-                <div class="category-box" style="display: none">
+                <div id="category-box" class="category-box" style="display: none">
                     <img src="" alt="all"/>
-<!--                    <img src="./images/Catalog/all.png" alt="all"/>-->
                     <p>Все</p>
                 </div>
             </section>
@@ -48,13 +48,13 @@
                     <p id="counter">1–12 из 57 результатов</p>
                 </div>
 
-                <div id="products-pages">
-                    <p class="page-box" style="display: none">1</p>
+                <div class="products-pages">
+                    <p id="page-box1" class="page-box" style="display: none">1</p>
                 </div>
             </section>
 
             <section id="products-container">
-                <div class="one-product-container" style="display: none">
+                <div id="one-product" class="one-product-container" style="display: none">
                     <div class="image-wrap">
                         <img src="" alt="product">
                     </div>
@@ -63,12 +63,33 @@
                     <button class="button-add">Добавить в корзину</button>
                 </div>
             </section>
+
         </div>
     </div>
+
+    <section id="bottom-counter">
+        <div id="wrapper">
+            <div class="products-pages">
+                <p id="page-box2" class="page-box" style="display: none">1</p>
+            </div>
+        </div>
+    </section>
 
 </main>
 
 <footer>
+    <div class="footer-0">
+        <a href="#">
+            <img src="./images/logo_footer.png" class="logo-footer">
+        </a>
+        <div id="phone-dot">
+            <img src="./images/icon_phone.svg" class="img-phone-footer">
+            <p class="dot in-flex"></p>
+        </div>
+        <p class="two-phones-in-footer">8 988 765-12-59<br>8 918 490-89-88</p>
+        <p class="dot"></p>
+    </div>
+
     <div class="footer-1">
         <section class="menu-footer">
             <a href="#">Партнерам</a>
