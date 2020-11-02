@@ -27,7 +27,8 @@ header .menu-header {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: calc(62%);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 header .menu-header a {
   text-decoration: none;

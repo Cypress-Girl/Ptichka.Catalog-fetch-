@@ -4,6 +4,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 #bottom-counter #wrapper .products-pages .page-box, #central-block .products-wrapper #caption-container .products-pages .page-box {
   width: 40px;
@@ -11,7 +13,6 @@
   border-radius: 10px;
   background-color: white;
   margin-right: 6px;
-  box-shadow: 0 0 2px 0 rgba(115, 75, 63, 0.3);
   padding-top: 8px;
   box-sizing: border-box;
   cursor: pointer;

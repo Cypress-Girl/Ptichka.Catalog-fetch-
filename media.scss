@@ -1,3 +1,18 @@
+@import "./general";
+
+@media screen and (max-width: 1100px) {
+
+  header .menu-header {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    a {
+      padding-right: 30px;
+    }
+  }
+}
+
 @media screen and (max-width: 812px) {
 
   header .logo {
@@ -8,14 +23,9 @@
     left: calc(100% / 2 - 70px);
   }
 
-  header .menu-header {
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    a {
-      padding-right: 30px;
-    }
+  #category-container #category-wrapper #categories .category-box img {
+    width: 95px;
+    height: 95px;
   }
 
   footer {
@@ -101,7 +111,7 @@
     font-size: 26px;
   }
 
-  #category-container #category-wrapper #categories{
+  #category-container #category-wrapper #categories {
     margin-top: 60px;
   }
 }
@@ -111,6 +121,22 @@
   header .menu-header {
     a {
       padding-right: 10px;
+    }
+  }
+
+  #category-container #category-wrapper #categories .category-box {
+    p {
+      padding: 0;
+    }
+
+    .light-green,
+    .orange-yellow,
+    .yellow,
+    .light-purple,
+    .gray,
+    .red,
+    .light-brown {
+      color: $brown;
     }
   }
 
@@ -145,33 +171,16 @@
     margin: 5px;
   }
 
-  #category-container #category-wrapper #categories .category-box p {
-    padding: 0;
-  }
-
   #central-block {
     padding: 0;
   }
 
-  #central-block .products-wrapper #caption-container {
-    height: 140px;
-  }
-
-  #central-block .products-wrapper #products-container .one-product-container .image-wrap {
-    width: 90%;
-    padding: 0;
-  }
-
-  #central-block .products-wrapper #caption-container #about-container #caption {
-    font-size: 20px;
-  }
-
-  #central-block .products-wrapper #products-container .one-product-container {
-    height: auto;
-  }
-
   #bottom-counter {
     height: 100px;
+  }
+
+  #central-block .products-wrapper #caption-container {
+    height: 160px;
   }
 
   #bottom-counter #wrapper .products-pages .page-box, #central-block .products-wrapper #caption-container .products-pages .page-box {
@@ -189,4 +198,5 @@
       justify-content: space-between;
     }
   }
+
 }
